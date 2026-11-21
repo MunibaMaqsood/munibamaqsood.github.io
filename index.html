@@ -142,9 +142,9 @@ footer{padding:2rem 0 3rem;color:var(--mute);font-size:.9rem}
 <footer><div class="wrap">© <span id="yr"></span> Muniba Maqsood · BS Mathematics, CASPAM</div></footer>
 <script>
 // Add your own profile links here and they will appear in the Contact section.
-const LINKS={GitHub:'https://github.com/MunibaMaqsood',LinkedIn:'',Email:''};
+const LINKS={GitHub:'https://github.com/MunibaMaqsood',LinkedIn:'https://www.linkedin.com/in/muniba-maqsood-413196437',Email:'munibamaqsood25@gmail.com',Phone:'0310-6201631'};
 const box=document.getElementById('links');
-Object.entries(LINKS).forEach(([k,v])=>{if(!v)return;const a=document.createElement('a');a.className='btn p';a.textContent=k;a.href=k==='Email'?'mailto:'+v:v;if(k!=='Email')a.rel='noopener';box.appendChild(a)});
+Object.entries(LINKS).forEach(([k,v])=>{if(!v)return;const a=document.createElement('a');a.className='btn p';a.textContent=k==='Phone'?v:k;a.href=k==='Email'?'mailto:'+v:k==='Phone'?'tel:+92'+v.replace(/\D/g,'').replace(/^0/,''):v;if(k!=='Email'&&k!=='Phone')a.rel='noopener';box.appendChild(a)});
 if(!box.children.length)box.innerHTML='<a class="btn p" href="#top">Back to top</a>';
 document.getElementById('yr').textContent=new Date().getFullYear();
 </script>
