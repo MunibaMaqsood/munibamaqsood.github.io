@@ -3,149 +3,164 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Muniba Maqsood – Mathematics, Machine Learning and AI</title>
-<meta name="description" content="Portfolio of Muniba Maqsood, BS Mathematics student working on machine learning, RAG chatbots and workflow automation.">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;1,500&family=Figtree:wght@400;500;600&display=swap">
+<title>ExamDesk – Conduct exams online, from setup to results</title>
+<meta name="description" content="ExamDesk lets schools, universities and training teams build timed exams, run them online and mark them automatically.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
 <style>
-:root{--bg:#f3f7f6;--card:#fff;--ink:#14211f;--mute:#566866;--line:#d5e0de;--acc:#0b6e68;--acc-ink:#fff;--tag:#e3f0ee;--grid:rgba(11,110,104,.07);
+:root{--bg:#f6f7fb;--card:#fff;--ink:#14213f;--mute:#586380;--line:#dde1ec;--acc:#e5530f;--acc-ink:#fff;--navy:#16254a;--navy-ink:#fff;--soft:#e9edf8;--ok:#14794f;--ok-bg:#e1f4ea;--bad:#b3261e;--bad-bg:#fbe8e6;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c1615;--card:#13211f;--ink:#e6f0ee;--mute:#9bb3b0;--line:#25403d;--acc:#52c7bd;--acc-ink:#06201e;--tag:#183431;--grid:rgba(82,199,189,.08);color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#0c1615;--card:#13211f;--ink:#e6f0ee;--mute:#9bb3b0;--line:#25403d;--acc:#52c7bd;--acc-ink:#06201e;--tag:#183431;--grid:rgba(82,199,189,.08);color-scheme:dark}
-html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);height:auto}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1326;--card:#151d38;--ink:#e8ecf8;--mute:#a0abc8;--line:#2a3558;--acc:#ff8a4c;--acc-ink:#1a0c02;--navy:#0a0f1f;--navy-ink:#e8ecf8;--soft:#1b2646;--ok:#52d39b;--ok-bg:#12332a;--bad:#ff8e86;--bad-bg:#3a1d1c;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0d1326;--card:#151d38;--ink:#e8ecf8;--mute:#a0abc8;--line:#2a3558;--acc:#ff8a4c;--acc-ink:#1a0c02;--navy:#0a0f1f;--navy-ink:#e8ecf8;--soft:#1b2646;--ok:#52d39b;--ok-bg:#12332a;--bad:#ff8e86;--bad-bg:#3a1d1c;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
 *{box-sizing:border-box}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important}}
-body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Figtree,system-ui,sans-serif}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Hanken Grotesk",system-ui,sans-serif}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
-h1,h2,h3{font-family:Newsreader,Georgia,serif;font-weight:600;line-height:1.1;margin:0}
-a{color:var(--acc)}
-.wrap{max-width:1040px;margin:0 auto;padding:0 1.25rem}
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-header .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;height:60px}
-.logo{font:600 1.25rem Newsreader,Georgia,serif;text-decoration:none;color:var(--ink)}
-nav{display:flex;gap:1.1rem}nav a{color:var(--mute);text-decoration:none;font-size:.95rem;font-weight:500}nav a:hover{color:var(--acc)}
-@media(max-width:640px){nav a:nth-child(n+4){display:none}}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.12;margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding:0 1.25rem}
 :focus-visible{outline:3px solid var(--acc);outline-offset:3px;border-radius:4px}
-.hero{background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:32px 32px;border-bottom:1px solid var(--line)}
-.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:2rem;align-items:center;padding-top:4.5rem;padding-bottom:4.5rem}
-@media(max-width:780px){.hero .wrap{grid-template-columns:1fr;padding-top:2.5rem;padding-bottom:2.5rem}}
-h1{font-size:clamp(2.8rem,7vw,5rem);letter-spacing:-.02em}
-.role{font:italic 500 1.5rem Newsreader,Georgia,serif;color:var(--acc);margin:.8rem 0 1rem}
-.lead{max-width:52ch;color:var(--mute);font-size:1.1rem}
-.btns{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.6rem}
-.btn{display:inline-block;padding:.7rem 1.3rem;border-radius:8px;font-weight:600;text-decoration:none;border:1.5px solid var(--acc);color:var(--acc)}
-.btn.p{background:var(--acc);color:var(--acc-ink)}
-.fig{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:.8rem}
-.fig svg{display:block;width:100%;height:auto}
-.fig p{margin:.4rem .4rem 0;font-size:.85rem;color:var(--mute)}
-.pt{fill:var(--acc);opacity:0;animation:pop .4s forwards}
-@keyframes pop{to{opacity:.85}}
-.fit{stroke:var(--ink);stroke-width:2;stroke-dasharray:330;stroke-dashoffset:330;animation:draw 1.4s 1.3s forwards}
-@keyframes draw{to{stroke-dashoffset:0}}
-section{padding:4rem 0;border-bottom:1px solid var(--line)}
-h2{font-size:clamp(1.9rem,4vw,2.6rem);margin-bottom:1.5rem}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
-@media(max-width:780px){.two{grid-template-columns:1fr}}
-.facts{margin:0;padding:0;list-style:none}
-.facts li{display:flex;justify-content:space-between;gap:1rem;padding:.65rem 0;border-bottom:1px solid var(--line)}
-.facts span:first-child{color:var(--mute)}
-.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
-.box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.3rem}
-.box h3{font-size:1.3rem;margin-bottom:.7rem}
-.tags{display:flex;flex-wrap:wrap;gap:.4rem;padding:0;margin:0;list-style:none}
-.tags li{background:var(--tag);color:var(--ink);padding:.2rem .7rem;border-radius:99px;font-size:.88rem}
-.proj{display:grid;gap:1rem}
-.pr{display:grid;grid-template-columns:150px 1fr;gap:1.5rem;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.5rem}
-@media(max-width:640px){.pr{grid-template-columns:1fr;gap:.6rem}}
-.st{font-weight:600;color:var(--acc);font-size:.95rem}
-.pr h3{font-size:1.5rem;margin-bottom:.5rem}
-.pr p{margin:.2rem 0 .9rem;color:var(--mute)}
-.goals{padding-left:1.2rem}.goals li{margin:.5rem 0}
-.contact{text-align:left}
-.links{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1rem}
-footer{padding:2rem 0 3rem;color:var(--mute);font-size:.9rem}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:64px}
+.logo{font:700 1.35rem Fraunces,Georgia,serif;color:var(--ink);text-decoration:none}
+nav{display:flex;gap:1.2rem;align-items:center}nav a{color:var(--mute);text-decoration:none;font-weight:500;font-size:.95rem}nav a:hover{color:var(--ink)}
+@media(max-width:700px){nav a.l{display:none}}
+.btn{display:inline-block;border:2px solid var(--acc);background:var(--acc);color:var(--acc-ink);padding:.7rem 1.35rem;border-radius:10px;font:700 1rem "Hanken Grotesk",sans-serif;text-decoration:none;cursor:pointer}
+.btn.o{background:none;color:var(--ink);border-color:var(--line)}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+nav .btn{padding:.45rem 1rem;color:var(--acc-ink)}
+.hero{padding:4rem 0}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:center}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr;gap:2rem}.hero{padding:2.5rem 0}}
+h1{font-size:clamp(2.5rem,6vw,4.3rem);letter-spacing:-.02em}
+.lead{font-size:1.2rem;color:var(--mute);max-width:46ch;margin:1.2rem 0 1.8rem}
+.row{display:flex;gap:.7rem;flex-wrap:wrap}
+.trust{margin-top:1.8rem;color:var(--mute);font-size:.95rem}
+/* demo card */
+.demo{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:0 18px 50px -24px rgba(20,33,63,.45);overflow:hidden}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:.9rem 1.2rem;background:var(--navy);color:var(--navy-ink)}
+.dh b{font-weight:600}.tm{font:700 1.2rem Fraunces,Georgia,serif;font-variant-numeric:tabular-nums}
+.tm.low{color:#ff8e86}
+.db{padding:1.3rem}
+.bar{height:6px;border-radius:9px;background:var(--soft);margin-bottom:1rem;overflow:hidden}.bar i{display:block;height:100%;background:var(--acc);transition:width .3s}
+.q{font:600 1.25rem Fraunces,Georgia,serif;margin:.2rem 0 .8rem}
+.o{display:flex;gap:.7rem;align-items:center;border:1.5px solid var(--line);border-radius:10px;padding:.65rem .9rem;margin:.45rem 0;cursor:pointer;background:var(--bg)}
+.o input{accent-color:var(--acc)}.o.sel{border-color:var(--acc)}
+.o.ok{border-color:var(--ok);background:var(--ok-bg)}.o.bad{border-color:var(--bad);background:var(--bad-bg)}
+.df{display:flex;justify-content:space-between;gap:.5rem;margin-top:1rem}
+.res{text-align:center;padding:.5rem 0}.res .big{font:700 3.2rem Fraunces,Georgia,serif}
+.ok-t{color:var(--ok);font-weight:700}.bad-t{color:var(--bad);font-weight:700}
+/* sections */
+section{padding:4.5rem 0}
+section.alt{background:var(--card);border-block:1px solid var(--line)}
+h2{font-size:clamp(1.9rem,4vw,2.7rem);margin-bottom:.8rem}
+.sub{color:var(--mute);max-width:56ch;margin:0 0 2.2rem}
+.types{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card)}
+.t{padding:1.4rem;border:0 solid var(--line);border-width:0 1px 1px 0;margin:0 -1px -1px 0}
+.t h3{font-size:1.25rem;margin-bottom:.35rem}.t p{margin:0;color:var(--mute);font-size:.98rem}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;counter-reset:s;padding:0;list-style:none}
+.steps li{counter-increment:s;border-top:3px solid var(--acc);padding-top:1rem}
+.steps li::before{content:counter(s);display:block;font:700 2.4rem Fraunces,Georgia,serif;color:var(--acc);line-height:1}
+.steps h3{font-size:1.25rem;margin:.4rem 0}.steps p{margin:0;color:var(--mute)}
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem}
+.f{border:1px solid var(--line);border-radius:12px;padding:1.4rem;background:var(--bg)}
+.f h3{font-size:1.2rem;margin-bottom:.4rem}.f p{margin:0;color:var(--mute);font-size:.98rem}
+.soon{display:inline-block;margin-top:.7rem;font-size:.85rem;font-weight:600;color:var(--acc)}
+details{border-bottom:1px solid var(--line);padding:1rem 0}details summary{font-weight:700;cursor:pointer;font-size:1.05rem}details p{color:var(--mute);margin:.6rem 0 0}
+.cta{background:var(--navy);color:var(--navy-ink);text-align:center;padding:4.5rem 0}
+.cta p{color:color-mix(in srgb,var(--navy-ink) 75%,transparent);max-width:48ch;margin:0 auto 1.6rem}
+footer{padding:2rem 0 3rem;color:var(--mute);font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 </style>
 </head>
 <body>
-<header><div class="wrap"><a class="logo" href="#top">Muniba Maqsood</a><nav aria-label="Main"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#goals">Goals</a><a href="#contact">Contact</a></nav></div></header>
+<header><div class="wrap"><a class="logo" href="#top">ExamDesk</a>
+<nav aria-label="Main"><a class="l" href="#exams">Exam types</a><a class="l" href="#how">How it works</a><a class="l" href="#features">Features</a><a class="l" href="#faq">FAQ</a><a class="btn" href="#demo">Try a demo</a></nav></div></header>
 
 <main id="top">
 <div class="hero"><div class="wrap">
  <div>
-  <h1>Muniba Maqsood</h1>
-  <p class="role">Mathematics student building with machine learning</p>
-  <p class="lead">I study BS Mathematics at CASPAM and turn that foundation into working software: demand forecasting models, document-answering chatbots and business automations.</p>
-  <div class="btns"><a class="btn p" href="#projects">See my projects</a><a class="btn" href="#contact">Get in touch</a></div>
+  <h1>Conduct any exam online, fairly and on time.</h1>
+  <p class="lead">Build a timed paper in minutes, let candidates sit it from any device, and get every script marked the moment they submit.</p>
+  <div class="row"><a class="btn" href="#demo">Take the sample exam</a><a class="btn o" href="#how">See how it works</a></div>
+  <p class="trust">Multiple choice, true or false and short answer questions, with an automatic timer and instant results.</p>
  </div>
- <figure class="fig" style="margin:0">
-  <svg viewBox="0 0 360 270" role="img" aria-label="Scatter plot of data points with a fitted regression line">
-   <g stroke="var(--line)" stroke-width="1.5"><line x1="30" y1="240" x2="340" y2="240"/><line x1="30" y1="240" x2="30" y2="20"/></g>
-   <g>
-    <circle class="pt" style="animation-delay:.1s" cx="60" cy="205" r="5"/><circle class="pt" style="animation-delay:.2s" cx="85" cy="185" r="5"/>
-    <circle class="pt" style="animation-delay:.3s" cx="105" cy="200" r="5"/><circle class="pt" style="animation-delay:.4s" cx="130" cy="160" r="5"/>
-    <circle class="pt" style="animation-delay:.5s" cx="150" cy="170" r="5"/><circle class="pt" style="animation-delay:.6s" cx="175" cy="135" r="5"/>
-    <circle class="pt" style="animation-delay:.7s" cx="200" cy="145" r="5"/><circle class="pt" style="animation-delay:.8s" cx="225" cy="105" r="5"/>
-    <circle class="pt" style="animation-delay:.9s" cx="250" cy="120" r="5"/><circle class="pt" style="animation-delay:1s" cx="275" cy="80" r="5"/>
-    <circle class="pt" style="animation-delay:1.1s" cx="300" cy="70" r="5"/><circle class="pt" style="animation-delay:1.2s" cx="320" cy="50" r="5"/>
-   </g>
-   <line class="fit" x1="50" y1="212" x2="325" y2="48"/>
-  </svg>
-  <p>Fitting a model to data: where mathematics meets machine learning.</p>
- </figure>
+ <div class="demo" id="demo" aria-live="polite">
+  <div class="dh"><b>Sample exam: General knowledge</b><span class="tm" id="tm">02:00</span></div>
+  <div class="db" id="db"></div>
+ </div>
 </div></div>
 
-<section id="about"><div class="wrap two">
- <div><h2>About</h2>
-  <p>I am a Mathematics student who enjoys making ideas run as real programs. My work so far spans machine learning, Python, retrieval-augmented generation and no-code automation.</p>
-  <p>I like projects with a clear business problem behind them, such as predicting stock shortages in a food business, because they force the maths to be useful.</p></div>
- <ul class="facts" aria-label="Quick facts">
-  <li><span>Degree</span><span>BS Mathematics</span></li>
-  <li><span>Department</span><span>CASPAM</span></li>
-  <li><span>Roll no.</span><span>BSE-23-04</span></li>
-  <li><span>Focus</span><span>ML, RAG chatbots, automation</span></li>
- </ul>
-</div></section>
-
-<section id="skills"><div class="wrap"><h2>Skills</h2>
- <div class="skills">
-  <div class="box"><h3>Machine learning</h3><ul class="tags"><li>Regression</li><li>Classification</li><li>Random Forest</li><li>Decision trees</li><li>Gini impurity</li><li>Model evaluation</li></ul></div>
-  <div class="box"><h3>Programming</h3><ul class="tags"><li>Python</li><li>VS Code</li><li>Data processing</li><li>HTML</li><li>CSS</li></ul></div>
-  <div class="box"><h3>AI applications</h3><ul class="tags"><li>RAG</li><li>LLMs</li><li>Embeddings</li><li>Vector databases</li><li>Ollama</li></ul></div>
-  <div class="box"><h3>Tools and business</h3><ul class="tags"><li>n8n</li><li>ERP concepts</li><li>GitHub</li><li>Vercel</li></ul></div>
+<section class="alt" id="exams"><div class="wrap">
+ <h2>One platform for every kind of exam</h2>
+ <p class="sub">Whatever you are assessing, the same simple flow applies: set the paper, set the clock, and let the system do the marking.</p>
+ <div class="types">
+  <div class="t"><h3>School tests and quizzes</h3><p>Weekly class tests, unit checks and revision quizzes with instant feedback for students.</p></div>
+  <div class="t"><h3>University midterms and finals</h3><p>Longer timed papers with mixed question types and mark weighting per question.</p></div>
+  <div class="t"><h3>Entrance and admission tests</h3><p>Screen large groups of applicants against a fixed pass mark.</p></div>
+  <div class="t"><h3>Professional certification</h3><p>Check competence with clear pass or fail outcomes and a full answer review.</p></div>
+  <div class="t"><h3>Recruitment assessments</h3><p>Give every candidate the same questions, the same time and the same marking.</p></div>
+  <div class="t"><h3>Practice and mock exams</h3><p>Let learners rehearse under real exam conditions as often as they want.</p></div>
  </div>
 </div></section>
 
-<section id="projects"><div class="wrap"><h2>Projects</h2>
- <div class="proj">
-  <article class="pr"><div class="st">In progress</div><div><h3>Stockout risk prediction</h3><p>A machine learning project for the food industry. A Random Forest Regressor forecasts demand to flag stockout risk and guide inventory replenishment.</p><ul class="tags"><li>Python</li><li>Random Forest</li><li>Demand forecasting</li></ul></div></article>
-  <article class="pr"><div class="st">In development</div><div><h3>PDF question-answering chatbot</h3><p>A RAG-based assistant that answers questions from uploaded PDF documents, using embeddings, a vector database and a locally run LLM through Ollama.</p><ul class="tags"><li>RAG</li><li>Ollama</li><li>Vector database</li></ul></div></article>
-  <article class="pr"><div class="st">Built</div><div><h3>Form-to-email automation</h3><p>An n8n workflow that sends an email automatically when a form is submitted, practised as part of learning how automation streamlines business processes.</p><ul class="tags"><li>n8n</li><li>Workflow automation</li></ul></div></article>
-  <article class="pr"><div class="st">Live</div><div><h3>ExamDesk: online exam website</h3><p>A website for conducting exams online, with a timer, three question types, instant marking and an exam builder. <a href="https://munibamaqsood.github.io/examdesk-website/" rel="noopener">View the live site</a>.</p><ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul></div></article>
-  <article class="pr"><div class="st">Live</div><div><h3>This portfolio</h3><p>A personal site written in HTML and CSS and hosted through GitHub and Vercel to share my work and build my professional presence.</p><ul class="tags"><li>HTML</li><li>CSS</li><li>Vercel</li></ul></div></article>
+<section id="how"><div class="wrap">
+ <h2>From blank page to results in four steps</h2>
+ <p class="sub">There is nothing to install. Everything runs in the browser.</p>
+ <ol class="steps">
+  <li><h3>Create the paper</h3><p>Add questions, mark values, duration and a pass mark.</p></li>
+  <li><h3>Share the exam</h3><p>Candidates choose the exam, enter their name and begin.</p></li>
+  <li><h3>Conduct it</h3><p>A countdown runs, answers are tracked and the paper submits itself at zero.</p></li>
+  <li><h3>Review results</h3><p>See scores, outcomes and each answer against the correct one.</p></li>
+ </ol>
+</div></section>
+
+<section class="alt" id="features"><div class="wrap">
+ <h2>Built for the exam room</h2>
+ <p class="sub">Every feature below works today in the ExamDesk exam builder.</p>
+ <div class="feat">
+  <div class="f"><h3>Three question types</h3><p>Multiple choice, true or false and short answer, each with its own marks.</p></div>
+  <div class="f"><h3>Automatic timer</h3><p>A visible countdown warns candidates in the last minute and submits when time ends.</p></div>
+  <div class="f"><h3>Instant marking</h3><p>Scores, percentage and pass or fail appear as soon as the paper is handed in.</p></div>
+  <div class="f"><h3>Question palette</h3><p>Candidates jump between questions, flag the uncertain ones and see what is unanswered.</p></div>
+  <div class="f"><h3>Answer review</h3><p>Each attempt shows the candidate’s answer beside the correct one.</p></div>
+  <div class="f"><h3>Results record</h3><p>Every attempt is stored with name, exam, score and submission time.</p><span class="soon">Next: shared results across devices and teacher logins</span></div>
  </div>
 </div></section>
 
-<section id="goals"><div class="wrap two">
- <div><h2>What I am working towards</h2></div>
- <ul class="goals">
-  <li>Finish and refine the stockout prediction project.</li>
-  <li>Launch a fully working RAG chatbot.</li>
-  <li>Gain hands-on experience with ERP systems and workflow automation.</li>
-  <li>Document every project on GitHub and LinkedIn.</li>
- </ul>
+<section id="faq"><div class="wrap" style="max-width:760px">
+ <h2>Common questions</h2>
+ <details><summary>How are short answers marked?</summary><p>You list one or more accepted answers. Matching ignores capital letters and extra spaces, so “islamabad” and “Islamabad” both count.</p></details>
+ <details><summary>What happens when the time runs out?</summary><p>The exam submits automatically and the candidate sees their result straight away.</p></details>
+ <details><summary>Can candidates change an answer before submitting?</summary><p>Yes. They can move back and forth between questions until they submit or the timer ends.</p></details>
+ <details><summary>Do I need to install anything?</summary><p>No. ExamDesk runs in any modern browser on a phone, tablet or computer.</p></details>
 </div></section>
 
-<section id="contact" class="contact"><div class="wrap"><h2>Let’s connect</h2>
- <p class="lead">I am open to internships, collaborations and conversations about machine learning and automation.</p>
- <div class="links" id="links"></div>
-</div></section>
+<div class="cta"><div class="wrap">
+ <h2>Ready to run your next exam?</h2>
+ <p>Start with the sample paper above, then build your own in a few minutes.</p>
+ <a class="btn" href="https://claude.ai/artifact/CgxznJ38FEbYd79STLTt2G" rel="noopener">Open the exam builder</a>
+</div></div>
 </main>
-<footer><div class="wrap">© <span id="yr"></span> Muniba Maqsood · BS Mathematics, CASPAM</div></footer>
+<footer><div class="wrap"><span>© <span id="yr"></span> ExamDesk</span><span>Online exam conduct made simple</span></div></footer>
+
 <script>
-// Add your own profile links here and they will appear in the Contact section.
-const LINKS={GitHub:'https://github.com/MunibaMaqsood',LinkedIn:'',Email:''};
-const box=document.getElementById('links');
-Object.entries(LINKS).forEach(([k,v])=>{if(!v)return;const a=document.createElement('a');a.className='btn p';a.textContent=k;a.href=k==='Email'?'mailto:'+v:v;if(k!=='Email')a.rel='noopener';box.appendChild(a)});
-if(!box.children.length)box.innerHTML='<a class="btn p" href="#top">Back to top</a>';
+const Q=[
+{q:'Which planet is closest to the Sun?',o:['Venus','Mercury','Mars','Earth'],a:1},
+{q:'Water boils at 100 °C at sea level.',o:['True','False'],a:0},
+{q:'What is 7 × 8?',o:['54','56','63','64'],a:1}];
+let i=0,ans=Q.map(()=>null),left=120,t=null,done=false;
+const db=document.getElementById('db'),tm=document.getElementById('tm');
+function fmt(){tm.textContent=String(Math.floor(left/60)).padStart(2,'0')+':'+String(left%60).padStart(2,'0');tm.className='tm'+(left<30?' low':'')}
+function start(){clearInterval(t);i=0;ans=Q.map(()=>null);left=120;done=false;fmt();t=setInterval(()=>{left--;fmt();if(left<=0)finish()},1000);draw()}
+function draw(){const q=Q[i];
+ db.innerHTML=`<div class="bar"><i style="width:${(i+1)/Q.length*100}%"></i></div><p style="margin:0;color:var(--mute);font-size:.9rem">Question ${i+1} of ${Q.length}</p><p class="q">${q.q}</p>`+
+ q.o.map((o,j)=>`<label class="o ${ans[i]===j?'sel':''}"><input type="radio" name="o" ${ans[i]===j?'checked':''} onchange="ans[i]=${j};draw()">${o}</label>`).join('')+
+ `<div class="df"><button class="btn o" onclick="i--;draw()" ${i===0?'disabled':''}>Previous</button>${i<Q.length-1?'<button class="btn" onclick="i++;draw()">Next</button>':'<button class="btn" onclick="finish()">Submit</button>'}</div>`}
+function finish(){clearInterval(t);done=true;const s=Q.filter((q,k)=>ans[k]===q.a).length,p=Math.round(s/Q.length*100);
+ db.innerHTML=`<div class="res"><div class="big">${s}/${Q.length}</div><p>${p}% · <span class="${p>=50?'ok-t':'bad-t'}">${p>=50?'Passed':'Not passed'}</span></p></div>`+
+ Q.map((q,k)=>`<p style="margin:.7rem 0 .2rem;font-weight:600">${k+1}. ${q.q}</p><div class="o ${ans[k]===q.a?'ok':'bad'}" style="cursor:default">Your answer: ${ans[k]===null?'(blank)':q.o[ans[k]]}${ans[k]===q.a?'':' · Correct: '+q.o[q.a]}</div>`).join('')+
+ `<div class="df"><button class="btn o" onclick="start()" style="width:100%">Retake the sample</button></div>`}
+start();
 document.getElementById('yr').textContent=new Date().getFullYear();
 </script>
 </body>
